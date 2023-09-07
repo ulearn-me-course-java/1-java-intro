@@ -14,3 +14,7 @@ Verify:
     - gradle clean check
   only:
     - merge_requests
+  artifacts:
+    when: always
+    reports:
+      junit: "$CI_PROJECT_DIR/**/build/test-results/test/TEST-*.xml"
